@@ -9,7 +9,7 @@ module handle(xp, yp, xs, ys, overlap)
     xg = xs * 4;
     yg = ys / 2;
 
-    rotate(180)
+    rotate([0, 0, 180])
     {
         union()
         {
