@@ -1,4 +1,4 @@
-// defines everyting
+// everyting depends from that variable
 c = 2;
 
 
