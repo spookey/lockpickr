@@ -1,6 +1,6 @@
 include <handle.scad>
 
-translate([-(10 * c), 0, 0])
+translate([-(15 * c), 0, 0])
 {
     union()
     {
@@ -22,6 +22,49 @@ translate([-(10 * c), 0, 0])
     }
 }
 
+translate([-(10 * c), 0, 0])
+{
+    union()
+    {
+        render(convexity = 90)
+        {
+            translate([0, c, 0])
+            {
+                difference()
+                {
+                    translate([-(0.5 * c), 0, 0])
+                    {
+                        color("fuchsia") square([(2 * c), (2 * c)], center=true);
+                    }
+                    rotate([0, 0, 45])
+                    {
+                        translate([0, (1.25 * c), 0])
+                        {
+                            color("lime") square([(4 * c), (2 * c)], center=true);
+                        }
+                    }
+                }
+            }
+            difference()
+            {
+                translate([-(0.5 * c), 0, 0])
+                {
+                    color("fuchsia") square([(2 * c), (2 * c)], center=true);
+                }
+                rotate([0, 0, 45])
+                {
+                    translate([0, (1.25 * c), 0])
+                    {
+                        color("lime") square([(4 * c), (2 * c)], center=true);
+                    }
+                }
+            }
+        }
+        handle(0, 0, c, (30 * c), -(c / 2));
+    }
+}
+
+
 translate([-(5 * c), 0, 0])
 {
     union()
@@ -41,7 +84,6 @@ translate([-(5 * c), 0, 0])
                         color("lime") square([(4 * c), (2 * c)], center=true);
                     }
                 }
-
             }
         }
         handle(0, 0, c, (30 * c), -(c / 2));
