@@ -1,5 +1,4 @@
 include <handle.scad>
-include <globals.scad>
 
 translate([-(10 * c), 0, 0])
 {

@@ -1,3 +1,7 @@
+// defines everyting
+c = 2;
+
+
 module handle(xp, yp, xs, ys, overlap)
 {
     // xp yp == fusspunkt
