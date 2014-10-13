@@ -5,7 +5,7 @@ translate([-(15 * c), 0, 0])
     union()
     {
         circle(r=c, $fn=90);
-        handle(0, 0, c, (30 * c), -(c / 2));
+        handle(-(c / 2));
     }
 }
 
@@ -18,7 +18,7 @@ translate([-(10 * c), 0, 0])
         {
             circle(r=(c/1.25), $fn=90);
         }
-        handle(0, 0, c, (30 * c), -(c / 2));
+        handle(-(c / 2));
     }
 }
 
@@ -40,6 +40,6 @@ translate([-(5 * c), 0, 0])
                 }
             }
         }
-        handle(0, 0, c, (30 * c), -(c / 2));
+        handle(-(c / 2));
     }
 }

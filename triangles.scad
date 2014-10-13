@@ -50,7 +50,7 @@ translate([-(15 * c), 0, 0])
                 }
             }
         }
-        handle(0, 0, c, (30 * c), -(c / 2));
+        handle(-(c / 2));
     }
 }
 
@@ -58,16 +58,10 @@ translate([-(10 * c), 0, 0])
 {
     union()
     {
-        translate([0, (2 * c), 0])
-        {
-            arrow();
-        }
-        translate([0, c, 0])
-        {
-            arrow();
-        }
+        translate([0, (2 * c), 0]) arrow();
+        translate([0, c, 0]) arrow();
         arrow();
-        handle(0, 0, c, (30 * c), -(c / 2));
+        handle(-(c / 2));
     }
 }
 
@@ -76,12 +70,9 @@ translate([-(5 * c), 0, 0])
 {
     union()
     {
-        translate([0, c, 0])
-        {
-            arrow();
-        }
+        translate([0, c, 0]) arrow();
         arrow();
-        handle(0, 0, c, (30 * c), -(c / 2));
+        handle(-(c / 2));
     }
 }
 
@@ -90,6 +81,6 @@ translate([0, 0, 0])
     union()
     {
         arrow();
-        handle(0, 0, c, (30 * c), -(c / 2));
+        handle(-(c / 2));
     }
 }

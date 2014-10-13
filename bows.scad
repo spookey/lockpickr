@@ -1,6 +1,6 @@
 include <handle.scad>
 
-translate([-(15 * c), 0, 0])
+module bow()
 {
     union()
     {
@@ -22,6 +22,43 @@ translate([-(15 * c), 0, 0])
                 }
             }
         }
-        handle(0, 0, c, (30 * c), -(c / 2));
+    }
+}
+
+
+translate([-(15 * c), 0, 0])
+{
+    union()
+    {
+        bow();
+        handle(-(c / 2));
+    }
+}
+
+translate([-(10 * c), 0, 0])
+{
+    union()
+    {
+        bow();
+        translate([-(2.5 * c), (2 * c), 0])
+        {
+            circle(d=c, $fn=90);
+        }
+        handle(-(c / 2));
+    }
+}
+
+a = sqrt(pow(c,2)/2);
+
+translate([-(5 * c), 0, 0])
+{
+    union()
+    {
+        bow();
+        translate([-(2.5 * c), (2 * c), 0])
+        {
+            rotate([0, 0, 45]) square([a, a], center=true);
+        }
+        handle(-(c / 2));
     }
 }

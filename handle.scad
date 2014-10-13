@@ -1,29 +1,25 @@
-// everyting depends from that variable
-c = 2;
+// scale variable ~ this is the universal unit
+c = 3;
 
-
-module handle(xp, yp, xs, ys, overlap)
+module handle(overlap)
 {
-    // xp yp == fusspunkt
-    // xs ys == stab
-    // xg yg == griff
 
-    ys = ys + overlap;
-
-    xg = xs * 4;
-    yg = ys / 2;
+    // how long is the thin part of the handle
+    s_len = (30 * c) + overlap;
 
     rotate([0, 0, 180])
     {
         union()
         {
-            translate([xp - (xs/2), yp - overlap])
+            // thin part
+            translate([-(c/2), -overlap])
             {
-                square([xs, ys], center=false);
+                square([c, s_len], center=false);
             }
-            translate([xp - (xg/2), yp + ys - overlap])
+            // the handle
+            translate([-(c * 2), (s_len - overlap)])
             {
-                square([xg, yg], center=false);
+                square([c * 4, (s_len / 2)], center=false);
             }
         }
     }
